@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Drill 2:Candidate Verification System</title>
+    <style>
+        /* Varsity Basketball Color Palette Style Guide (Grade 10 Level) */
+        :root {
+            --primary-navy: #112240;      /* Header & Primary Focus */
+            --court-orange: #FF5500;      /* Interactive / Button Accent */
+            --trophy-gold: #FFB800;       /* Secondary Border / Highlight */
+            --bg-light-grey: #F4F6F9;     /* Page Background */
+            --card-white: #FFFFFF;        /* Form Container Background */
+            --text-dark: #1E293B;         /* Body Text */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light-grey);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--primary-navy);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 4px solid var(--court-orange);
+            padding-bottom: 8px;
+        }
+
+        form {
+            background-color: var(--card-white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--primary-navy);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #CBD5E1;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--court-orange);
+        }
+
+        input[type="button"] {
+            width: 100%;
+            background-color: var(--court-orange);
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #E04B00;
+        }
+
+        input[type="button"]:active {
+            transform: scale(0.98);
+        }
+
+        #div1 {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            text-align: center;
+        }
+    </style>
+</head>
+<h1>P.E. Basketball Varsity Club</h1>
+<body>
+      <form>
+        <input type="text" id="fname" placeholder="Enter your first name"><br>
+        <input type="text" id="lname" placeholder="Enter your last name"><br>
+        <input type="button" py-click="get_name" value="Search">
+    </form>
+    <div id="div1"></div>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
